@@ -45,7 +45,7 @@ app.get("/{*path}", (_req, res) => {
 const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
-  console.error("❌ MONGODB_URI is not set in .env");
+  console.error("❌ MONGODB_URI is not set");
   process.exit(1);
 }
 
