@@ -1,0 +1,121 @@
+import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const Footer = () => {
+  const containerRef = useRef(null);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    // Parallax & reveal effect for the massive background text
+    if (textRef.current && containerRef.current) {
+      gsap.fromTo(
+        textRef.current,
+        { y: -100, opacity: 0.1 },
+        {
+          y: 0,
+          opacity: 0.8,
+          ease: 'power1.out',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top bottom',
+            end: 'bottom bottom',
+            scrub: 1,
+          },
+        }
+      );
+    }
+  }, []);
+
+  return (
+    <footer ref={containerRef} className="bg-[#081b16] text-white pt-24 pb-12 overflow-hidden flex flex-col items-center">
+      
+      {/* 1. Pre-Footer / CTA Section (Image 1 Reference) */}
+      <div className="max-w-4xl mx-auto px-6 text-center mb-32 relative z-10 w-full">
+        <h2 className="text-5xl md:text-7xl font-(family-name:--font-heading) italic font-semibold mb-6 tracking-tight text-[#f2f4ee]">
+          Giải pháp toàn diện cho<br />liêm chính học thuật.
+        </h2>
+        <p className="text-[#a4b4ad] text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
+          AIToolkit là hệ thống hỗ trợ sinh viên hiện đại. Nhanh chóng, chính xác và được thiết kế cho tương lai của giáo dục tại FPT.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link 
+            to="/quiz" 
+            className="px-8 py-4 bg-[#ccff00] text-[#081b16] rounded-2xl font-bold text-lg hover:bg-white transition-colors duration-300 w-full sm:w-auto text-center"
+          >
+            Làm bài đánh giá
+          </Link>
+          <Link 
+            to="/learnlab" 
+            className="px-8 py-4 bg-white/10 text-white rounded-2xl font-semibold text-lg hover:bg-white/20 transition-colors duration-300 border border-white/5 w-full sm:w-auto text-center"
+          >
+            Khám phá tính năng
+          </Link>
+        </div>
+
+        {/* Global/Trusted Partners */}
+        <div className="mt-24">
+          <p className="text-[#647b72] text-xs font-bold tracking-[0.2em] uppercase mb-8">
+            Được tin dùng bởi hơn 2000+ sinh viên FPT
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6 text-[#647b72] font-semibold text-lg opacity-60">
+            <span>FPT.EDU</span>
+            <span>FU.HCM</span>
+            <span>COURSERA</span>
+            <span>TURNITIN</span>
+            <span>GRAMMARLY</span>
+          </div>
+        </div>
+      </div>
+
+      {/* 2. Massive Text Footer Section (Image 2 Reference) */}
+      <div className="relative w-full border-t border-white/10 pt-10 px-6 sm:px-12 flex flex-col justify-end min-h-[50vh] z-10">
+        
+        {/* Absolute Massive Text Background */}
+        <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none select-none -z-10">
+          <h1 
+            ref={textRef}
+            className="text-[20vw] font-(family-name:--font-heading) font-bold text-[#ccff00]/10 tracking-tighter whitespace-nowrap leading-none"
+            style={{ transform: 'translateY(10%)' }}
+          >
+            aitoolkit
+          </h1>
+        </div>
+
+        {/* Bottom Links Row */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-8 pb-4">
+          
+          <div className="text-[#647b72] text-sm font-semibold tracking-wide order-3 lg:order-1 text-center lg:text-left">
+            © 2026 FPT UNIVERSITY HCM.<br/>
+            ALL RIGHTS RESERVED.
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-10 text-white text-sm font-bold tracking-widest uppercase order-1 lg:order-2">
+            <Link to="/" className="hover:text-[#ccff00] transition-colors">Trang chủ</Link>
+            <Link to="/quiz" className="hover:text-[#ccff00] transition-colors">Đánh giá</Link>
+            <Link to="/learnlab" className="hover:text-[#ccff00] transition-colors">Học tập</Link>
+            <Link to="/support" className="hover:text-[#ccff00] transition-colors">Hỗ trợ</Link>
+          </div>
+
+          <div className="flex items-center gap-6 text-white order-2 lg:order-3">
+             <a href="https://www.facebook.com/profile.php?id=61583706310530" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#ccff00] transition-colors text-sm font-bold tracking-widest uppercase">
+               FACEBOOK
+             </a>
+             <a href="#" className="flex items-center gap-2 hover:text-[#ccff00] transition-colors text-sm font-bold tracking-widest uppercase">
+               TIKTOK
+             </a>
+          </div>
+
+        </div>
+      </div>
+
+    </footer>
+  );
+};
+
+export default Footer;
