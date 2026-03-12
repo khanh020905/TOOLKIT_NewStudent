@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* ========================================
+   Academic Integrity Toolkit - Custom Theme
+   ======================================== */
+
+@theme {
+  /* Primary - Deep Navy / Royal Blue */
+  --color-primary-50: #eff3ff;
+  --color-primary-100: #dbe4fe;
+  --color-primary-200: #bfcffe;
+  --color-primary-300: #93b0fd;
+  --color-primary-400: #6088fa;
+  --color-primary-500: #3b64f5;
+  --color-primary-600: #2545ea;
+  --color-primary-700: #1d33d7;
+  --color-primary-800: #1e2bae;
+  --color-primary-900: #1e2a89;
+  --color-primary-950: #0f1647;
+
+  /* Accent - Vibrant Orange (FPT Energy) */
+  --color-accent-50: #fff7ed;
+  --color-accent-100: #ffeed4;
+  --color-accent-200: #ffd9a9;
+  --color-accent-300: #ffbd72;
+  --color-accent-400: #ff9639;
+  --color-accent-500: #ff7a12;
+  --color-accent-600: #f06008;
+  --color-accent-700: #c74809;
+  --color-accent-800: #9e3910;
+  --color-accent-900: #7f3110;
+  --color-accent-950: #451606;
+
+  /* Neutral / Surface */
+  --color-surface-50: #f9fafb;
+  --color-surface-100: #f3f4f6;
+  --color-surface-200: #e5e7eb;
+  --color-surface-300: #d1d5db;
+  --color-surface-400: #9ca3af;
+  --color-surface-500: #6b7280;
+  --color-surface-600: #4b5563;
+  --color-surface-700: #374151;
+  --color-surface-800: #1f2937;
+  --color-surface-900: #111827;
+  --color-surface-950: #030712;
+
+  /* Success / Error / Warning */
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+
+  /* Font families */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ========================================
+   Global Styles
+   ======================================== */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(59, 100, 245, 0.2);
+  color: inherit;
+}
+
+/* Smooth image rendering */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid #3b64f5;
+  outline-offset: 2px;
+}
