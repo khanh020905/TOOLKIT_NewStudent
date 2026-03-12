@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "category": "Đạo văn",
+    "question": "Hành vi nào sau đây được xem là đạo văn?",
+    "options": [
+      "Trích dẫn một đoạn văn và ghi nguồn đầy đủ",
+      "Copy nguyên văn một đoạn từ internet mà không ghi nguồn",
+      "Tự viết lại ý tưởng bằng ngôn ngữ của mình và ghi nguồn",
+      "Sử dụng kiến thức chung (common knowledge) mà không ghi nguồn"
+    ],
+    "correctIndex": 1,
+    "explanation": "Copy nguyên văn mà không ghi nguồn là hành vi đạo văn trực tiếp (direct plagiarism). Dù chỉ một câu, bạn vẫn phải trích dẫn nguồn gốc."
+  },
+  {
+    "id": 2,
+    "category": "Đạo văn",
+    "question": "Self-plagiarism (tự đạo văn) là gì?",
+    "options": [
+      "Nhờ người khác viết bài cho mình",
+      "Trích dẫn bài của bạn cùng lớp",
+      "Nộp lại bài cũ của chính mình cho một môn học khác mà không xin phép",
+      "Sử dụng AI để viết bài"
+    ],
+    "correctIndex": 2,
+    "explanation": "Self-plagiarism xảy ra khi bạn nộp lại toàn bộ hoặc một phần bài cũ của mình cho một môn khác mà không có sự đồng ý của giảng viên."
+  },
+  {
+    "id": 3,
+    "category": "Trích dẫn",
+    "question": "Theo chuẩn APA, cách trích dẫn trong bài nào sau đây là ĐÚNG?",
+    "options": [
+      "(Nguyễn Văn A, 2024, trang 15)",
+      "[Nguyễn Văn A, 2024]",
+      "Nguyễn Văn A nói rằng... (2024)",
+      "(Nguyễn, 2024, tr. 15)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Theo APA 7th edition, trích dẫn trong bài sử dụng họ tác giả, năm xuất bản và số trang (nếu trích nguyên văn): (Nguyễn, 2024, tr. 15)."
+  },
+  {
+    "id": 4,
+    "category": "Trích dẫn",
+    "question": "Khi nào bạn KHÔNG cần trích dẫn nguồn?",
+    "options": [
+      "Khi paraphrase (viết lại) ý tưởng từ một bài báo",
+      "Khi sử dụng số liệu thống kê từ một nghiên cứu",
+      "Khi dịch một đoạn văn từ tiếng Anh sang tiếng Việt",
+      "Khi nêu kiến thức phổ thông ai cũng biết (VD: Trái đất quay quanh mặt trời)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Kiến thức phổ thông (common knowledge) không cần trích dẫn. Nhưng paraphrase, số liệu, và dịch thuật đều cần ghi nguồn gốc."
+  },
+  {
+    "id": 5,
+    "category": "AI & Đạo đức",
+    "question": "Cách sử dụng AI nào sau đây là PHÙ HỢP trong học thuật?",
+    "options": [
+      "Sử dụng AI để gợi ý ý tưởng, sau đó tự viết bài bằng ngôn từ của mình",
+      "Nhờ ChatGPT viết toàn bộ bài luận rồi nộp dưới tên mình",
+      "Copy câu trả lời của AI và chỉ thay đổi vài từ",
+      "Dùng AI để dịch nguyên bài viết từ tiếng khác rồi nộp"
+    ],
+    "correctIndex": 0,
+    "explanation": "AI có thể được dùng như công cụ hỗ trợ: gợi ý ý tưởng, kiểm tra ngữ pháp, tham khảo cấu trúc. Nhưng bạn phải tự viết nội dung chính và ghi rõ nếu có sử dụng AI."
+  },
+  {
+    "id": 6,
+    "category": "AI & Đạo đức",
+    "question": "Giảng viên yêu cầu 'Không được sử dụng AI'. Bạn nên làm gì?",
+    "options": [
+      "Vẫn dùng AI nhưng paraphrase để không bị phát hiện",
+      "Dùng AI rồi kiểm tra bằng AI detector trước khi nộp",
+      "Hỏi bạn bè xem có ai dùng không rồi quyết định",
+      "Tuân thủ hoàn toàn và tự viết bài"
+    ],
+    "correctIndex": 3,
+    "explanation": "Khi giảng viên cấm sử dụng AI, bạn phải tuân thủ hoàn toàn. Vi phạm có thể dẫn đến điểm 0, cảnh cáo học vụ hoặc đình chỉ."
+  },
+  {
+    "id": 7,
+    "category": "Paraphrase",
+    "question": "Đâu là cách paraphrase (viết lại) ĐÚNG?",
+    "options": [
+      "Thay một vài từ đồng nghĩa trong câu gốc",
+      "Đọc hiểu ý chính, sau đó viết lại hoàn toàn bằng ngôn ngữ của mình và ghi nguồn",
+      "Dịch câu gốc sang ngôn ngữ khác rồi dịch lại",
+      "Đảo thứ tự các câu trong đoạn văn gốc"
+    ],
+    "correctIndex": 1,
+    "explanation": "Paraphrase đúng cách: đọc hiểu → gấp tài liệu lại → viết bằng lời của bạn → so sánh với bản gốc → ghi nguồn. Chỉ thay từ đồng nghĩa là KHÔNG đủ."
+  },
+  {
+    "id": 8,
+    "category": "Paraphrase",
+    "question": "Đoạn gốc: 'Sinh viên cần phát triển kỹ năng tư duy phản biện.' Đâu là paraphrase PHÙ HỢP?",
+    "options": [
+      "Sinh viên cần nâng cao kỹ năng tư duy phản biện.",
+      "Students need to develop critical thinking skills.",
+      "Việc rèn luyện khả năng phân tích và đánh giá vấn đề là điều cần thiết đối với người học đại học.",
+      "Sinh viên phải phát triển kỹ năng tư duy phản biện."
+    ],
+    "correctIndex": 2,
+    "explanation": "Paraphrase tốt thay đổi hoàn toàn cấu trúc câu và từ ngữ mà vẫn giữ nguyên ý nghĩa. Các lựa chọn khác chỉ thay vài từ hoặc dịch nguyên văn."
+  },
+  {
+    "id": 9,
+    "category": "Đạo văn",
+    "question": "Bạn tìm được một bài viết hay trên mạng. Bạn muốn dùng 2 câu nguyên văn. Cách nào ĐÚNG?",
+    "options": [
+      "Copy 2 câu đó vào bài, thêm vài từ của mình xung quanh",
+      "Paraphrase 2 câu đó và không cần ghi nguồn vì đã viết lại",
+      "Hỏi tác giả xin phép trước rồi không cần ghi nguồn",
+      "Đặt 2 câu đó trong dấu ngoặc kép \" \" và ghi nguồn trích dẫn đầy đủ"
+    ],
+    "correctIndex": 3,
+    "explanation": "Khi trích nguyên văn, bạn PHẢI đặt trong dấu ngoặc kép và ghi nguồn đầy đủ (tác giả, năm, số trang). Đây là quy tắc cơ bản nhất."
+  },
+  {
+    "id": 10,
+    "category": "AI & Đạo đức",
+    "question": "Theo quy định của FPT University, điều nào sau đây là ĐÚNG về liêm chính học thuật?",
+    "options": [
+      "Sinh viên có trách nhiệm đảm bảo bài nộp là sản phẩm trí tuệ của chính mình",
+      "Chỉ cần không bị phát hiện thì không phải đạo văn",
+      "Đạo văn chỉ áp dụng cho bài luận, không áp dụng cho bài nhóm",
+      "Nếu bạn cùng nhóm đạo văn thì chỉ bạn đó bị phạt"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mọi sinh viên FPT đều phải đảm bảo liêm chính học thuật. Đạo văn áp dụng cho TẤT CẢ hình thức bài nộp, và trong bài nhóm, tất cả thành viên đều chịu trách nhiệm."
+  },
+  {
+    "id": 11,
+    "category": "Trích dẫn",
+    "question": "Bạn muốn trích dẫn một trang web. Thông tin nào là BẮT BUỘC?",
+    "options": [
+      "Chỉ cần URL của trang web",
+      "Chỉ cần tên trang web và ngày truy cập",
+      "Tên tác giả (hoặc tổ chức), năm xuất bản, tiêu đề bài viết, và URL",
+      "Chỉ cần screenshot trang web đó"
+    ],
+    "correctIndex": 2,
+    "explanation": "Trích dẫn trang web cần: tác giả/tổ chức, năm, tiêu đề bài viết, tên website, và đường link URL. Thiếu thông tin sẽ bị coi là trích dẫn không hợp lệ."
+  },
+  {
+    "id": 12,
+    "category": "Đạo văn",
+    "question": "Tình huống nào sau đây KHÔNG phải là đạo văn?",
+    "options": [
+      "Nhờ anh chị viết hộ bài rồi nộp dưới tên mình",
+      "Mua bài luận có sẵn trên mạng",
+      "Copy bài của bạn cùng lớp với sự đồng ý của bạn đó",
+      "Tham khảo nhiều nguồn, tổng hợp ý tưởng, viết bằng lời mình và ghi nguồn đầy đủ"
+    ],
+    "correctIndex": 3,
+    "explanation": "Cách làm đúng: nghiên cứu từ nhiều nguồn → tổng hợp → viết bằng ngôn ngữ riêng → trích dẫn tất cả nguồn đã tham khảo. Copy với sự đồng ý vẫn là đạo văn!"
+  },
+  {
+    "id": 13,
+    "category": "AI & Đạo đức",
+    "question": "Bạn sử dụng ChatGPT để kiểm tra ngữ pháp bài viết. Điều này có hợp lệ không?",
+    "options": [
+      "Không, mọi hình thức dùng AI đều là gian lận",
+      "Có, nhưng bạn nên ghi chú trong bài rằng đã dùng AI hỗ trợ ngữ pháp",
+      "Có, và không cần ghi chú gì vì chỉ kiểm tra ngữ pháp",
+      "Chỉ hợp lệ nếu giảng viên cho phép rõ ràng"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dùng AI kiểm tra ngữ pháp thường được chấp nhận, nhưng minh bạch là quan trọng nhất. Bạn nên ghi chú trong bài để đảm bảo liêm chính."
+  },
+  {
+    "id": 14,
+    "category": "Đạo văn",
+    "question": "Collusion (thông đồng) trong học thuật là gì?",
+    "options": [
+      "Hai sinh viên cùng nộp bài giống nhau cho một bài tập cá nhân",
+      "Hai sinh viên thảo luận về đề tài trước khi viết bài",
+      "Hai sinh viên cùng nghiên cứu tại thư viện",
+      "Hai sinh viên cùng hỏi giảng viên về bài tập"
+    ],
+    "correctIndex": 0,
+    "explanation": "Collusion xảy ra khi hai hoặc nhiều sinh viên hợp tác trái phép trong bài tập cá nhân, dẫn đến bài nộp giống nhau. Thảo luận ý tưởng chung thì OK, nhưng phải tự viết bài riêng."
+  },
+  {
+    "id": 15,
+    "category": "Trích dẫn",
+    "question": "Sự khác biệt giữa trích dẫn trực tiếp và trích dẫn gián tiếp là gì?",
+    "options": [
+      "Trích dẫn trực tiếp không cần ghi nguồn, gián tiếp thì cần",
+      "Không có sự khác biệt, cả hai đều giống nhau",
+      "Trực tiếp dùng nguyên văn trong ngoặc kép, gián tiếp viết lại ý bằng lời mình",
+      "Trực tiếp là từ sách, gián tiếp là từ internet"
+    ],
+    "correctIndex": 2,
+    "explanation": "Trích dẫn trực tiếp: dùng nguyên văn của tác giả trong dấu ngoặc kép. Trích dẫn gián tiếp: viết lại ý tưởng bằng lời của bạn (paraphrase). Cả hai đều phải ghi nguồn!"
+  },
+  {
+    "id": 16,
+    "category": "Paraphrase",
+    "question": "Tại sao chỉ thay từ đồng nghĩa (synonym swapping) KHÔNG được coi là paraphrase hợp lệ?",
+    "options": [
+      "Vì từ đồng nghĩa không chính xác 100%",
+      "Vì phần mềm kiểm tra đạo văn không phát hiện được",
+      "Vì cấu trúc câu vẫn giống bản gốc, chỉ thay vài từ không thể hiện sự hiểu biết",
+      "Vì luật bản quyền không cho phép"
+    ],
+    "correctIndex": 2,
+    "explanation": "Synonym swapping giữ nguyên cấu trúc gốc, cho thấy bạn không thực sự hiểu và xử lý thông tin. Paraphrase đúng đòi hỏi viết lại hoàn toàn bằng cách diễn đạt riêng của bạn."
+  },
+  {
+    "id": 17,
+    "category": "Đạo văn",
+    "question": "Hình phạt nào sau đây có thể áp dụng cho vi phạm liêm chính học thuật tại FPT?",
+    "options": [
+      "Chỉ nhắc nhở bằng lời nói",
+      "Không có hình phạt nếu là lần đầu vi phạm",
+      "Chỉ trừ điểm bài tập, không ảnh hưởng kết quả môn học",
+      "Điểm 0 cho bài tập, cảnh cáo, hoặc đình chỉ học tập"
+    ],
+    "correctIndex": 3,
+    "explanation": "Vi phạm liêm chính học thuật tại FPT có thể bị điểm 0, cảnh cáo toàn trường, và trong trường hợp nghiêm trọng có thể bị đình chỉ hoặc buộc thôi học."
+  },
+  {
+    "id": 18,
+    "category": "Trích dẫn",
+    "question": "Trong danh mục tài liệu tham khảo APA, các nguồn được sắp xếp theo thứ tự nào?",
+    "options": [
+      "Theo thứ tự ABC của họ tác giả",
+      "Theo thứ tự xuất hiện trong bài viết",
+      "Theo năm xuất bản từ mới đến cũ",
+      "Theo loại nguồn (sách trước, báo sau)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Theo APA 7th edition, danh mục tài liệu tham khảo (References) được sắp xếp theo thứ tự bảng chữ cái ABC dựa trên họ của tác giả đầu tiên."
+  },
+  {
+    "id": 19,
+    "category": "AI & Đạo đức",
+    "question": "Bạn dùng AI để tạo dàn ý cho bài luận, sau đó tự viết toàn bộ nội dung. Đánh giá cách làm này?",
+    "options": [
+      "Hoàn toàn sai, không được dùng AI trong bất kỳ bước nào",
+      "Chấp nhận được nếu giảng viên cho phép và bạn ghi chú rõ ràng",
+      "Chỉ hợp lệ nếu bạn xóa dàn ý AI trước khi nộp",
+      "Không cần ghi chú vì chỉ dùng AI cho dàn ý"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dùng AI tạo dàn ý rồi tự viết nội dung là cách sử dụng AI có trách nhiệm, NHƯNG bạn phải kiểm tra quy định của giảng viên và ghi chú minh bạch về việc sử dụng AI."
+  },
+  {
+    "id": 20,
+    "category": "Paraphrase",
+    "question": "Sau khi paraphrase, bước quan trọng nhất bạn cần làm là gì?",
+    "options": [
+      "Đăng lên mạng xã hội để xin ý kiến",
+      "Gửi cho bạn bè kiểm tra hộ",
+      "So sánh với bản gốc để đảm bảo không giống quá và ghi trích dẫn nguồn",
+      "Dịch sang tiếng Anh để kiểm tra"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sau khi paraphrase, bạn cần so sánh với bản gốc để chắc chắn đã viết lại đủ khác biệt, đồng thời PHẢI ghi nguồn trích dẫn. Paraphrase mà không ghi nguồn vẫn là đạo văn."
+  }
+]
