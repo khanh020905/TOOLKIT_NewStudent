@@ -63,6 +63,35 @@ const COURSES = [
     ],
   },
   {
+    id: "harvard",
+    icon: <GoMortarBoard className="w-6 h-6" />,
+    color: "bg-indigo-100 text-indigo-600",
+    title: "Hướng dẫn trích dẫn Harvard",
+    duration: "6 phút đọc",
+    sections: [
+      {
+        heading: "Harvard Referencing là gì?",
+        content:
+          "Harvard là hệ thống trích dẫn **tác giả-năm** (author-date) được sử dụng rộng rãi trong các ngành khoa học xã hội, kinh doanh và nhân văn.\n\nĐặc điểm chính:\n• Trích dẫn trong bài ghi **(Họ tác giả, năm)** — tương tự APA\n• Danh mục tài liệu tham khảo (**Reference List**) đặt ở cuối bài\n• Không dùng footnote như Chicago\n• Đơn giản, dễ áp dụng cho sinh viên",
+      },
+      {
+        heading: "Trích dẫn trong bài (In-text Citation)",
+        content:
+          '"Liêm chính học thuật là nền tảng của giáo dục" (Nguyễn, 2024, tr. 12).\n\n**Trích dẫn gián tiếp (Paraphrase):**\n→ Theo Nguyễn (2024), liêm chính là yếu tố không thể thiếu.\n→ Liêm chính được xem là yếu tố cốt lõi (Nguyễn, 2024).\n\n**2 tác giả:** (Nguyễn & Trần, 2024)\n**3+ tác giả:** (Nguyễn et al., 2024)\n**Nhiều nguồn:** (Lê, 2022; Nguyễn, 2024; Trần, 2023) — sắp xếp ABC',
+      },
+      {
+        heading: "Danh mục tài liệu tham khảo (Reference List)",
+        content:
+          "Sắp xếp theo **ABC họ tác giả**. Dùng thụt lề treo (hanging indent).\n\n**Sách:**\nNguyễn, V.A. (2024) *Tên sách*. Nơi xuất bản: Nhà xuất bản.\n\n**Bài báo khoa học:**\nTrần, T.B. (2023) 'Tên bài báo', *Tên Tạp Chí*, 5(2), tr. 10–25.\n\n**Trang web:**\nLê, H.C. (2024) *Tên bài viết*. Available at: https://example.com (Accessed: 15 tháng 3 2024).\n\n**Báo cáo / Tài liệu tổ chức:**\nBộ Giáo dục (2023) *Quy định liêm chính học thuật*. Hà Nội: NXB Giáo dục.",
+      },
+      {
+        heading: "So sánh Harvard vs APA",
+        content:
+          '**Giống nhau:**\n• Đều dùng hệ thống tác giả-năm\n• In-text citation gần giống: (Họ, năm)\n• Reference List sắp xếp theo ABC\n\n**Khác nhau chính:**\n• APA dùng dấu **phẩy** sau họ tác giả → (Nguyễn, 2024). Harvard có thể bỏ dấu phẩy → (Nguyễn 2024)\n• APA: Tên bài viết trong sách/tạp chí viết thường. Harvard: Tên bài viết đặt trong dấu nháy đơn\n• APA: Ghi "https://doi.org/...". Harvard: Ghi "Available at: URL (Accessed: ngày)"\n\n💡 **Mẹo:** Luôn kiểm tra hướng dẫn của giảng viên vì mỗi trường có thể có biến thể Harvard riêng!',
+      },
+    ],
+  },
+  {
     id: "paraphrase",
     icon: <GoBook className="w-6 h-6" />,
     color: "bg-green-100 text-green-600",
@@ -168,7 +197,7 @@ const Support = () => {
           Khóa học ngắn
         </h1>
         <p className="text-surface-600 text-lg max-w-xl mx-auto">
-          5 bài học nhanh giúp bạn nắm vững kiến thức liêm chính học thuật.
+          6 bài học nhanh giúp bạn nắm vững kiến thức liêm chính học thuật.
         </p>
       </div>
 

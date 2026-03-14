@@ -28,21 +28,13 @@ const ACTIVITY_LABELS = {
     icon: GoPencil,
     color: "text-blue-500 bg-blue-50",
   },
-  survey_complete: {
-    label: "Hoàn thành khảo sát",
-    icon: GoChecklist,
-    color: "text-green-500 bg-green-50",
-  },
+
   game_complete: {
     label: "Hoàn thành mini game",
     icon: GoTrophy,
     color: "text-amber-500 bg-amber-50",
   },
-  checkin: {
-    label: "Check-in",
-    icon: GoCheckCircle,
-    color: "text-teal-500 bg-teal-50",
-  },
+
   quiz_complete: {
     label: "Hoàn thành quiz",
     icon: GoBook,
@@ -79,12 +71,7 @@ const STAT_CARDS = [
     icon: GoBook,
     color: "from-purple-500 to-purple-600",
   },
-  {
-    key: "survey_complete",
-    label: "Khảo sát",
-    icon: GoChecklist,
-    color: "from-green-500 to-green-600",
-  },
+
   {
     key: "game_complete",
     label: "Mini Game",
@@ -230,10 +217,9 @@ const Dashboard = () => {
             { label: "Tạo trích dẫn", to: "/citation-generator", emoji: "📝" },
             { label: "Làm quiz", to: "/quiz", emoji: "📋" },
             { label: "Xem video", to: "/learnlab", emoji: "🎬" },
-            { label: "Khảo sát", to: "/survey", emoji: "📊" },
+
             { label: "Mini game", to: "/mini-game", emoji: "🎮" },
             { label: "Khóa học ngắn", to: "/support", emoji: "📚" },
-            { label: "Check-in", to: "/checkin", emoji: "✅" },
           ].map((item) => (
             <Link
               key={item.to}

@@ -326,10 +326,10 @@ const MiniGame = () => {
             Chơi lại
           </button>
           <Link
-            to="/checkin"
+            to="/"
             className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-colors"
           >
-            Check-in nhận quà
+            Về trang chủ
             <GoRocket className="w-5 h-5" />
           </Link>
         </div>

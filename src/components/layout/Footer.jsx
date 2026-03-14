@@ -42,8 +42,8 @@ const Footer = () => {
           liêm chính học thuật.
         </h2>
         <p className="text-primary-300/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
-          AIToolkit là hệ thống hỗ trợ sinh viên hiện đại. Nhanh chóng, chính
-          xác và được thiết kế cho tương lai của giáo dục tại FPT.
+          TrueStudy Toolkit là hệ thống hỗ trợ sinh viên hiện đại. Nhanh chóng,
+          chính xác và được thiết kế cho tương lai của giáo dục tại FPT.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-20">
@@ -85,7 +85,7 @@ const Footer = () => {
             className="text-[20vw] font-(family-name:--font-heading) font-bold text-accent-500/20 tracking-tighter whitespace-nowrap leading-none"
             style={{ transform: "translateY(10%)" }}
           >
-            aitoolkit
+            truestudy
           </h1>
         </div>
 

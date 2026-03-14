@@ -245,7 +245,7 @@ const CardNav = ({
               <span
                 className={`font-(family-name:--font-heading) font-bold text-lg sm:text-xl tracking-tight transition-colors duration-500 ${isDark ? "text-primary-950" : "text-white"}`}
               >
-                AIToolkit
+                TrueStudy Toolkit
               </span>
             </Link>
           </div>

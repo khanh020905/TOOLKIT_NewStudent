@@ -5,9 +5,9 @@ import Home from "./pages/Home";
 import Quiz from "./pages/Quiz";
 import PlagiarismChecker from "./pages/PlagiarismChecker";
 import CitationGenerator from "./pages/CitationGenerator";
-import Survey from "./pages/Survey";
+
 import MiniGame from "./pages/MiniGame";
-import CheckIn from "./pages/CheckIn";
+
 import LearnLab from "./pages/LearnLab";
 import Support from "./pages/Support";
 import Login from "./pages/Login";
@@ -18,6 +18,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import CardNav from "./components/layout/CardNav";
 import Footer from "./components/layout/Footer";
 import LogoIcon from "./components/ui/LogoIcon";
+import Chatbot from "./components/ui/Chatbot";
 
 function App() {
   const location = useLocation();
@@ -57,24 +58,14 @@ function App() {
       ],
     },
     {
-      label: "Khảo sát",
+      label: "Hoạt động",
       bgColor: "#10b981", // emerald-500
       textColor: "#fff",
       links: [
         {
-          label: "Bài khảo sát",
-          href: "/survey",
-          ariaLabel: "Làm bài khảo sát",
-        },
-        {
           label: "Mini Game",
           href: "/mini-game",
           ariaLabel: "Chơi Mini Game",
-        },
-        {
-          label: "Check-in nhận quà",
-          href: "/checkin",
-          ariaLabel: "Check-in sự kiện",
         },
       ],
     },
@@ -119,14 +110,40 @@ function App() {
       <div className="flex flex-col min-h-screen bg-surface-50 text-surface-900 relative">
         {/* Decorative background element reminiscent of the reference image */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-          <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary-200/30 blur-[120px]" />
-          <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[40%] rounded-full bg-accent-200/20 blur-[100px]" />
+          <div
+            className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full blur-[120px]"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(37,69,234,0.12), rgba(124,58,237,0.06), transparent 70%)",
+            }}
+          />
+          <div
+            className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[40%] rounded-full blur-[100px]"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(249,115,22,0.1), rgba(245,158,11,0.05), transparent 70%)",
+            }}
+          />
+          <div
+            className="absolute top-[30%] right-[10%] w-[30%] h-[30%] rounded-full blur-[100px]"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(16,185,129,0.06), transparent 70%)",
+            }}
+          />
+          <div
+            className="absolute top-[60%] left-[20%] w-[25%] h-[25%] rounded-full blur-[80px]"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(124,58,237,0.05), transparent 70%)",
+            }}
+          />
         </div>
 
         {/* Navigation */}
         <CardNav
           logo={<LogoIcon className="w-7 h-7" />}
-          logoAlt="AIToolkit Logo"
+          logoAlt="TrueStudy Toolkit Logo"
           items={items}
           baseColor="rgba(255, 255, 255, 0.85)"
           menuColor="#0f1647"
@@ -144,9 +161,9 @@ function App() {
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/plagiarism-checker" element={<PlagiarismChecker />} />
             <Route path="/citation-generator" element={<CitationGenerator />} />
-            <Route path="/survey" element={<Survey />} />
+
             <Route path="/mini-game" element={<MiniGame />} />
-            <Route path="/checkin" element={<CheckIn />} />
+
             <Route path="/learnlab" element={<LearnLab />} />
             <Route path="/support" element={<Support />} />
             <Route path="/login" element={<Login />} />
@@ -157,6 +174,9 @@ function App() {
 
         {/* Footer - only on Home page */}
         {location.pathname === "/" && <Footer />}
+
+        {/* Chatbot */}
+        <Chatbot />
       </div>
     </AuthProvider>
   );
