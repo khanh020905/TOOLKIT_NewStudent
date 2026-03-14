@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { GoArrowRight, GoRocket } from "react-icons/go";
-import heroVideo from "../../assets/videos/Futuristic_Library_Collaboration_Video.mp4";
+
 import BlurText from "../ui/BlurText";
 import TargetCursor from "../ui/TargetCursor";
 
@@ -54,10 +54,17 @@ const Hero = () => {
         muted
         loop
         playsInline
+        preload="auto"
+        disablePictureInPicture
+        disableRemotePlayback
         className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+        style={{
+          willChange: "transform",
+          backfaceVisibility: "hidden",
+          background: "#0f1647",
+        }}
+        src="/videos/hero.mp4"
+      />
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary-950/70 via-primary-950/50 to-primary-950/80" />
