@@ -9,7 +9,33 @@ import {
   GoAlert,
   GoClock,
   GoFileMedia,
+  GoChevronDown,
 } from "react-icons/go";
+
+import guideVideo1 from "../assets/videos/video_1.mp4";
+import guideVideo2 from "../assets/videos/video_2.mp4";
+import guideVideo3 from "../assets/videos/video_3.mp4";
+
+const GUIDE_STEPS = [
+  {
+    id: 1,
+    title: "Nhập hoặc tải văn bản",
+    description: "Dán văn bản bài viết vào ô nhập liệu hoặc tải lên file .txt từ máy tính của bạn.",
+    video: guideVideo1,
+  },
+  {
+    id: 2,
+    title: "Phân tích văn bản",
+    description: "Nhấn nút \"Phân tích văn bản\" để AI kiểm tra đạo văn, phát hiện nội dung AI, và đánh giá trích dẫn.",
+    video: guideVideo2,
+  },
+  {
+    id: 3,
+    title: "Xem kết quả & cải thiện",
+    description: "Xem điểm số chi tiết, các vấn đề được phát hiện, và gợi ý cải thiện bài viết của bạn.",
+    video: guideVideo3,
+  },
+];
 
 const CATEGORIES = [
   { value: "all", label: "Tất cả" },
@@ -45,6 +71,9 @@ const LearnLab = () => {
   const [uploadError, setUploadError] = useState("");
   const [uploadSuccess, setUploadSuccess] = useState(false);
   const [playingId, setPlayingId] = useState(null);
+  const [activeGuideStep, setActiveGuideStep] = useState(0);
+  const [guideOpen, setGuideOpen] = useState(false);
+  const guideVideoRefs = useRef([]);
 
   const [form, setForm] = useState({
     title: "",
@@ -55,6 +84,13 @@ const LearnLab = () => {
   const fileRef = useRef(null);
   const [catDropdownOpen, setCatDropdownOpen] = useState(false);
   const catDropdownRef = useRef(null);
+
+  const handleGuideStepChange = (index) => {
+    guideVideoRefs.current.forEach((ref) => {
+      if (ref) ref.pause();
+    });
+    setActiveGuideStep(index);
+  };
 
   // Close dropdown on click outside
   useEffect(() => {
@@ -191,6 +227,107 @@ const LearnLab = () => {
           Xem các video hướng dẫn từ giảng viên về trích dẫn, paraphrase, sử
           dụng AI đúng cách và kiến thức liêm chính học thuật.
         </p>
+      </div>
+
+      {/* Video Guide Section */}
+      <div className="mb-10">
+        <button
+          onClick={() => setGuideOpen(!guideOpen)}
+          className="w-full flex items-center justify-between px-6 py-4 bg-white rounded-2xl border border-surface-200 shadow-sm hover:shadow-md transition-all duration-300 group"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-accent-100 flex items-center justify-center group-hover:bg-accent-200 transition-colors">
+              <GoPlay className="w-5 h-5 text-accent-600" />
+            </div>
+            <div className="text-left">
+              <h2 className="font-bold text-primary-950 font-(family-name:--font-heading) text-lg">
+                Hướng dẫn sử dụng công cụ kiểm tra đạo văn
+              </h2>
+              <p className="text-sm text-surface-500">
+                Xem video hướng dẫn 3 bước kiểm tra đạo văn
+              </p>
+            </div>
+          </div>
+          <GoChevronDown
+            className={`w-5 h-5 text-surface-400 transition-transform duration-300 ${guideOpen ? "rotate-180" : ""}`}
+          />
+        </button>
+
+        <div
+          className={`overflow-hidden transition-all duration-500 ease-in-out ${guideOpen ? "max-h-[800px] opacity-100 mt-4" : "max-h-0 opacity-0"}`}
+        >
+          <div className="bg-white rounded-2xl border border-surface-200 shadow-sm overflow-hidden">
+            {/* Step Tabs */}
+            <div className="flex border-b border-surface-200">
+              {GUIDE_STEPS.map((step, index) => (
+                <button
+                  key={step.id}
+                  onClick={() => handleGuideStepChange(index)}
+                  className={`flex-1 flex items-center justify-center gap-2 px-4 py-4 text-sm font-semibold transition-all duration-300 relative ${
+                    activeGuideStep === index
+                      ? "text-accent-600 bg-accent-50/50"
+                      : "text-surface-500 hover:text-surface-700 hover:bg-surface-50"
+                  }`}
+                >
+                  <span
+                    className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 transition-colors ${
+                      activeGuideStep === index
+                        ? "bg-accent-500 text-white"
+                        : "bg-surface-200 text-surface-600"
+                    }`}
+                  >
+                    {step.id}
+                  </span>
+                  <span className="hidden sm:inline">{step.title}</span>
+                  {activeGuideStep === index && (
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent-500" />
+                  )}
+                </button>
+              ))}
+            </div>
+
+            {/* Video + Description */}
+            <div className="p-6">
+              <div className="mb-4">
+                <h3 className="text-lg font-bold text-primary-950 mb-1">
+                  Bước {GUIDE_STEPS[activeGuideStep].id}:{" "}
+                  {GUIDE_STEPS[activeGuideStep].title}
+                </h3>
+                <p className="text-sm text-surface-600">
+                  {GUIDE_STEPS[activeGuideStep].description}
+                </p>
+              </div>
+              <div className="rounded-xl overflow-hidden border border-surface-200 bg-black">
+                <video
+                  ref={(el) => (guideVideoRefs.current[activeGuideStep] = el)}
+                  key={activeGuideStep}
+                  src={GUIDE_STEPS[activeGuideStep].video}
+                  controls
+                  className="w-full max-h-[420px] object-contain"
+                  preload="metadata"
+                >
+                  Trình duyệt không hỗ trợ video.
+                </video>
+              </div>
+
+              {/* Step Navigation Dots */}
+              <div className="flex items-center justify-center gap-2 mt-4">
+                {GUIDE_STEPS.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleGuideStepChange(index)}
+                    className={`rounded-full transition-all duration-300 ${
+                      activeGuideStep === index
+                        ? "w-8 h-2.5 bg-accent-500"
+                        : "w-2.5 h-2.5 bg-surface-300 hover:bg-surface-400"
+                    }`}
+                    aria-label={`Bước ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Controls: filter + upload button */}
